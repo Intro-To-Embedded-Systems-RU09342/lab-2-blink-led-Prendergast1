@@ -1,4 +1,4 @@
-# Lab 1: Blink an LED and you can control the world!     
+# Lab 2: Blink an LED and you can control the world!     
 As grandiose as this statement sounds, it is fairly accurate. By the time you are done this lab, you have probably done about 75% of what makes embedded difficult. Just to blink an LED on an MSP430, you need to understand:
 * The WatchDog Timer and its role in the processor
 * Initialization of the Clocks

@@ -1,6 +1,6 @@
-// Sean Prendergast
+// Author: Sean Prendergast
 // Code was initially started on September 18th, 2019
-// Code was last modified on ...
+// Code was last modified on October 5th, 2019
 // Submitted October 17th, 2019
 // Excercise: Simple Blink for MSP430G2553
 /* The objective in this exercise is essentially to write a program

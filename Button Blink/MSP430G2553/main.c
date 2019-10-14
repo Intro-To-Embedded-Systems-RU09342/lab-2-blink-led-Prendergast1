@@ -3,10 +3,6 @@
 // Code was last modified on October 5th, 2019
 // Submitted October 17th, 2019
 // Excercise: Button Blink for MSP430G2553
-/* The objective in this exercise is essentially to write a program
-to allow the LED on the MSP430G2553 to turn on and off simply from the push of a button
-visible to the user.
- */
 
 #include <msp430.h>
 
@@ -23,20 +19,21 @@ int main(void)
                     the internal resistor is connected to 3.6 V (VCC) and functions as a pull-up resistor.*/
                     // P1.3 basically represents the button on the MSP430G2553
 
-    while(1)    // Infinite while loop
+    while(1)    // While loop
     {
         // Once the program is ran, the LED is initially on and holds the value of 1.
-        // Once the button has been pressed once, the LED will turn off (hold the value of 0).
+        // Once the button has been pressed once, the LED will toggle
+        // Once the button has been released, the LED will stop blinking on and off
+        // and remain on or off depending on when the user released the button
 
         /* If-Statement is implemented such that if the value of Pin 1 input AND Bit 3 does not
-         * equal the value of P1.3, the LED will toggle between on and off.
-         *
+         * equal the value of bit 3, the LED will toggle.
          */
 
         if((P1IN & BIT3)!=BIT3)
         {
-            __delay_cycles(180000);
             P1OUT ^= BIT0;
+            __delay_cycles(100000);
         }
     }
 

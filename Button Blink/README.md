@@ -16,3 +16,19 @@ Much like the UART controlled speed, what if you could cycle between speeds base
 
 ### Color Change
 What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+
+# Sean Prendergast
+
+## Button Blink
+
+For this assignment, all implemented code would be written in C with the ultimate goal consisting of altering the state of the on-board LED, from on and off, simply from the push of the button for both processors. This button is also on-board for both processors and is ultimately utilized as a switch to change the state of the LED. Similar to "Simple Blink" and "Multiple Blink", the on-board LED for both processors have to be set to the output direction, as the LED will function as the output for the program built. Once the pins and bits assigned to the on-board LED are set to the output direction, the pins and bits assigned to the on-board button/switch need to be set as an input pin for both processors. This was achieved by enabling the internal resistor on the board connecting to the on-board button/switch, followed by connecting to the 3.6 V VCC source, which allows the internal resistor to be utilized as a pull-up resistor and prompts the user to use the on-board button/switch to monitor the state of the LED. 
+
+## Processors Utilized
+* MSP430FR6989
+* MSP430G2553
+
+## Dependencies
+This library would only be dependent on the MSP430.h header file used for all TI MSP430 processors. The MSP430.h header file is included in each C file submitted as no other header files were required for the assignment.
+
+## Differences in implementation for FR6989 and G2553
+
